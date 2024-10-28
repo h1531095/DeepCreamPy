@@ -6,27 +6,27 @@ except ImportError as e:
     print("Error when importing DEFAULT library : ", e)
     print("\nIf you made script named [\"os.py\", \"logging.py\", \"sys.py\", \"config.py\"] rename it")
     print("If not, re-install python or check your Python environment variables")
-try:
-    # local library
-    import file
-    from model import InpaintNN
-    from libs.utils import *
-    # external library
-    import numpy as np
-    from PIL import Image
-    import tensorflow as tf
-    from PySide2 import QtCore # for QThread
-except ImportError as e:
-    print("\n"+ '='*20 + " ImportError " + "=" * 20 + "\n")
-    if e.__class__.__name__ == "ModuleNotFoundError":
-        print(e)
-        print("Python libraries are missing. You can install all required libraries by running in the command line (terminal)")
-        print("cpu version : pip install -r requirements-cpu.txt")
-        print("gpu version : pip install -r requirements-gpu.txt")
-    else:
-        print("Error when importing libraries: ", e)
-    print("\nIf pip doesn't work, try update through Anaconda")
-    print("install Anaconda : https://www.anaconda.com/distribution/ \n")
+# try:
+# local library
+import file
+from model import InpaintNN
+from libs.utils import *
+# external library
+import numpy as np
+from PIL import Image
+import tensorflow as tf
+from PyQt6 import QtCore # for QThread
+# except ImportError as e:
+#     print("\n"+ '='*20 + " ImportError " + "=" * 20 + "\n")
+#     if e.__class__.__name__ == "ModuleNotFoundError":
+#         print(e)
+#         print("Python libraries are missing. You can install all required libraries by running in the command line (terminal)")
+#         print("cpu version : pip install -r requirements-cpu.txt")
+#         print("gpu version : pip install -r requirements-gpu.txt")
+#     else:
+#         print("Error when importing libraries: ", e)
+#     print("\nIf pip doesn't work, try update through Anaconda")
+#     print("install Anaconda : https://www.anaconda.com/distribution/ \n")
 
 """
 to allow decensoring in CLI, ignore all methods targeting Qt signals,

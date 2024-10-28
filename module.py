@@ -1,6 +1,6 @@
 from __future__ import division
 from ops import *
-import tensorflow.contrib.layers as layers
+import keras.layers as layers
 import math
 
 def conv_nn(input, dims1, dims2, size1, size2, k_size = 3):
